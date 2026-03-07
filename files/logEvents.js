@@ -36,6 +36,10 @@ console.log(uuid())
 const fs = require("fs")
 const fsPromises = require("fs").promises;
 const path = require('path')
+fs.readFile(path.join(__dirname,"starter.txt"),(err,data) => {
+    if (err) throw err;
+    console.log(data.toString())
+})
 const logEvents = async(message) => {
     const dateTime = `${format(new  Date(),'yyyyMMdd\tHH:mm:ss')}`
     const logItem = `${dateTime}\t${uuid()}\t${message} \n`
