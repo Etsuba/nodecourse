@@ -1,10 +1,10 @@
 {
   "name": "nodecourse",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon ./files/index.js"
+    "dev": "nodemon ./files/server.js"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +12,7 @@
   "description": "",
   "dependencies": {
     "date-fns": "^4.1.0",
+    "express": "^5.2.1",
     "uuid": "^13.0.0"
   },
   "devDependencies": {
