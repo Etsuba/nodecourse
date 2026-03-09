@@ -3,6 +3,12 @@ const app = express()
 const path = require('path')
 const PORT = process.env.PORT || 3500
 
+app.use((req,res,next) => {
+    console.log(`${req.method} ${req.path}`)
+    next()
+})
+
+//built in middel wares
 app.use(express.urlencoded({extended: false}))
 
 app.use(express.json())
