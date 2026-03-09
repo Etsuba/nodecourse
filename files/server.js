@@ -2,20 +2,18 @@ const express = require('express')
 const app = express()
 const path = require('path')
 const PORT = process.env.PORT || 3500
-const one = (req, res, next)=>{
-    console.log('one')
-    next()
-}
 
+app.use(express.urlencoded({extended: false}))
 
-const two = (req, res, next)=>{
-    console.log('two')
-    res.send('finished')
-}
+app.use(express.json())
+
+app.use(express.static(path.join(__dirname,'..','/public')))
 app.get('/',(req,res)=>{
     // res.sendFile(path.join(__dirname,"..","./views/index.html"))
     res.sendFile(path.join(__dirname,"..","./views/index.html"))
 })
+
+
 
 app.get('/new-page.html',(req,res)=>{
     // res.sendFile(path.join(__dirname,"..","./views/index.html"))
@@ -33,6 +31,17 @@ app.get('/hello.html',(req,res,next)=>{
 },(req,res) =>{
     res.send("hello world")
 })
+
+const one = (req, res, next)=>{
+    console.log('one')
+    next()
+}
+
+
+const two = (req, res, next)=>{
+    console.log('two')
+    res.send('finished')
+}
 
 app.get('/chain.html',[one,two])
 
