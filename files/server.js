@@ -2,14 +2,10 @@ const express = require('express')
 const app = express()
 const path = require('path')
 const PORT = process.env.PORT || 3500
-const logEvents = require('../middleware/logEvents.js')
+const {logger} = require('../middleware/logEvents.js')
  
-//custom middle ware
-app.use((req,res,next) => {
-    logEvents(`${req.method} ${req.headers.origin}\t ${req.url}`,'reqLog.txt')
-    console.log(`${req.method} ${req.url}`)
-    next()
-})
+//custom middle
+app.use(logger)
 
 //built in middel wares
 app.use(express.urlencoded({extended: false}))
