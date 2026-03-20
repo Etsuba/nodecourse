@@ -3,6 +3,7 @@ const app = express();
 const path = require('path');
 const PORT = process.env.PORT || 3500;
 const { logger } = require('../middleware/logEvents.js');
+const {  } = require('../middleware/logEvents.js');
 const cors = require('cors');
 
 // custom middleware
