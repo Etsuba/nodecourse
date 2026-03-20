@@ -3,7 +3,7 @@ const app = express();
 const path = require('path');
 const PORT = process.env.PORT || 3500;
 const { logger } = require('../middleware/logEvents.js');
-const {  } = require('../middleware/logEvents.js');
+const  errorHandler  = require('../middleware/errorHandler.js');
 const cors = require('cors');
 
 // custom middleware
@@ -66,10 +66,7 @@ app.use((req, res) => {
 });
 
 // error handler
-app.use((err, req, res, next) => {
-  console.log(err.stack);
-  res.status(500).send(err.message);
-});
+app.use(errorHandler);
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
