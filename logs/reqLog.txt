@@ -2,3 +2,5 @@
 20260310	02:21:47	37fd2335-2b36-46e3-95b5-20650d72522a	GET undefined	 /css/style.css
 20260310	02:37:02	e9a3285c-711d-4771-b575-26f9fa0a223f	GET undefined	 /
 20260310	02:37:02	adc0b4ae-9eca-4f78-bcbd-b0c27137ec50	GET undefined	 /css/style.css
+20260310	02:40:57	478cc674-0ded-4b3d-ac03-8f38cc0e14c6	GET undefined	 /css/style.css
+20260310	02:40:57	8662b8b3-1529-469a-a793-922928ccd6ba	GET undefined	 /.well-known/appspecific/com.chrome.devtools.json
