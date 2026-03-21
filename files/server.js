@@ -29,7 +29,7 @@ app.use(express.json());
 
 
 app.use(express.static(path.join(__dirname, '..', 'public')));
-app.use('/subdir', require('./routes/subdir'))
+app.use('/subdir', require('../routes/subdir'))
 // routes
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'views', 'index.html'));

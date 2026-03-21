@@ -14,3 +14,8 @@
 20260320	07:38:19	9bef9c65-82ff-4e3d-8614-a2c2f58cda6b	GET undefined	 /
 20260320	07:41:52	73c21f8e-3fc5-4afd-b2f7-d7e2fb4ffa36	GET undefined	 /
 20260320	07:41:53	68397b48-7e3e-4f98-beb0-bdb4af6c3355	GET undefined	 /css/style.css
+20260321	15:07:49	3411c763-712c-4006-9a59-e6af55bb9cf2	GET undefined	 /
+20260321	15:07:49	e444c0f1-b74c-416e-9bd3-1896021fb5b6	GET undefined	 /css/style.css
+20260321	15:08:09	6c241dc0-59fe-4811-be4a-097b1790eec5	GET undefined	 /
+20260321	15:08:09	d066cae5-344d-46d0-a94c-4145ab0d69af	GET undefined	 /css/style.css
+20260321	15:08:16	fa8463a5-51ad-4ee7-89ad-cca46e98fadc	GET undefined	 /subdir
