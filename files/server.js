@@ -27,43 +27,33 @@ app.use(cors(corsOptions));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-
+//serve static files
 app.use(express.static(path.join(__dirname, '..', 'public')));
 //to apply css for subdirectory
 app.use('/subdir', express.static(path.join(__dirname, '..', 'public')));
 
 app.use('/subdir', require('../routes/subdir'))
 // routes
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'views', 'index.html'));
-});
 
-app.get('/new-page.html', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'views', 'new-page.html'));
-});
 
-app.get('/old-page.html', (req, res) => {
-  res.redirect(301, '/new-page.html');
-});
+// app.get('/hello', (req, res, next) => {
+//   console.log('attempted to load hello.html');
+//   next();
+// }, (req, res) => {
+//   res.send("hello world");
+// });
 
-app.get('/hello.html', (req, res, next) => {
-  console.log('attempted to load hello.html');
-  next();
-}, (req, res) => {
-  res.send("hello world");
-});
+// const one = (req, res, next) => {
+//   console.log('one');
+//   next();
+// };
 
-const one = (req, res, next) => {
-  console.log('one');
-  next();
-};
+// const two = (req, res) => {
+//   console.log('two');
+//   res.send('finished');
+// };
 
-const two = (req, res) => {
-  console.log('two');
-  res.send('finished');
-};
-
-app.get('/chain.html', [one, two]);
+// app.get('/chain.html', [one, two]);
 
 // 404 handler
 app.use((req, res) => {
