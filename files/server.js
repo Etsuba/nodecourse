@@ -29,6 +29,9 @@ app.use(express.json());
 
 
 app.use(express.static(path.join(__dirname, '..', 'public')));
+//to apply css for subdirectory
+app.use('/subdir', express.static(path.join(__dirname, '..', 'public')));
+
 app.use('/subdir', require('../routes/subdir'))
 // routes
 app.get('/', (req, res) => {

@@ -5,6 +5,7 @@
 //     console.log("directory created")
 // })
 // const path = require('path')
+
 // fs.readFile(path.join(__dirname,"starter.txt"),(err,data) => {
 //     if (err) throw err;
 //     console.log(data.toString())
