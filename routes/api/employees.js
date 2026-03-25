@@ -9,7 +9,12 @@ router.route("/")
         res.json(data.employees)
       })
       .post((req,res)=>{
-        
+        res.json(
+            {
+                "firstname":req.body.firstname,
+                "lastname":req.body.lastname
+            }
+        )
       })
 
 module.exports = router;
