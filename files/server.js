@@ -32,7 +32,10 @@ app.use(express.static(path.join(__dirname, '..', 'public')));
 //to apply css for subdirectory
 app.use('/subdir', express.static(path.join(__dirname, '..', 'public')));
 
+//routes
 app.use('/subdir', require('../routes/subdir'))
+app.use('/', require('../routes/root'))
+app.use('/employees', require('../routes/api/employees'))
 // routes
 
 
@@ -43,6 +46,8 @@ app.use('/subdir', require('../routes/subdir'))
 //   res.send("hello world");
 // });
 
+
+//chaining route handlers
 // const one = (req, res, next) => {
 //   console.log('one');
 //   next();
