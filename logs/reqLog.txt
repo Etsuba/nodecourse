@@ -146,3 +146,6 @@
 20260325	09:37:31	e4fee7d5-ab76-4028-9474-0d025b3a47f9	GET undefined	 /employees
 20260325	09:37:34	43bdcb4a-fd7c-48ff-acf2-e835c14519c9	GET undefined	 /employees
 20260325	09:37:38	7c8dac2d-d1ed-42e7-a35c-d7ceac60bde8	POST undefined	 /employees
+20260325	10:24:16	f7c49eff-69b5-4a65-8e73-4d2a8e04fced	GET undefined	 /
+20260325	10:24:16	c320b54f-dd0d-4591-b804-d6e44ce93275	GET undefined	 /css/style.css
+20260325	10:24:18	ba58c5fa-e6d9-43c6-aeca-2c5a0a8d0d1e	GET undefined	 /favicon.ico

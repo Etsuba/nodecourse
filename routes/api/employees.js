@@ -1,39 +1,19 @@
 const express = require('express')
 const router = express.Router() //interms of app
-const data = {}//first its empty object
-data.employees = require("../../data/employees.json")//like connecting to the data base
+// const data = {}//first its empty object
+// data.employees = require("../../data/employees.json")//like connecting to the data base
+//we moved the above two code to the employesscontroler file
 
+const { getAllEmployees, createNewEmployee, updateEmployee, deleteEmployee, getEmployee } = require('../../controllers/employeesController');
 //chaining each http method together
 router.route("/")
-      .get((req, res)=>{
-        res.json(data.employees)
-      })
-      .post((req,res)=>{
-        res.json(
-            {
-                "firstname":req.body.firstname,
-                "lastname":req.body.lastname
-            }
-        )
-      })
-
-      .put  ((req,res) =>{
-        res.json(
-            {
-                "firstname":req.body.firstname,
-                "lastname":req.body.lastname
-            }
-        )
-      })
-
-      .delete((req,res)=>{
-        res.json({"id":req.body.id})
-      });
+      .get(getAllEmployees)
+      .post(createNewEmployee)
+      .put(updateEmployee)
+      .delete(deleteEmployee);
 
       router.route('/:id')
-             .get((req,res)=>{
-                res.json({"id": req.params.id})
-             });
+             .get(getEmployee);
 
       
 
