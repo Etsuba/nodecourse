@@ -20,6 +20,13 @@ const createNewEmployee  = (req,res)=>{
 
         const newEmployee = {
             id: data.employees[data.employees.length -1].id + 1 || 1,
+            firstname: req.body.firstname,
+            lastname: req.body.lastname
+
+        }
+
+        if (!newEmployee.first || ! newEmployee.lastname) {
+            return res.status(400).json({'message': 'First and last names are required.'})
         }
 
 
