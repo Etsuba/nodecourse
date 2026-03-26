@@ -30,6 +30,7 @@ const createNewEmployee  = (req,res)=>{
         }
 
         data.setEmployees ([...data.employees,newEmployee])
+        res.json(data.employees)
 
 
       }
