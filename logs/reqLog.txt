@@ -149,3 +149,6 @@
 20260325	10:24:16	f7c49eff-69b5-4a65-8e73-4d2a8e04fced	GET undefined	 /
 20260325	10:24:16	c320b54f-dd0d-4591-b804-d6e44ce93275	GET undefined	 /css/style.css
 20260325	10:24:18	ba58c5fa-e6d9-43c6-aeca-2c5a0a8d0d1e	GET undefined	 /favicon.ico
+20260325	12:27:43	0f159399-cc7b-454d-8e43-bcbf8f420390	GET undefined	 /new-page.html
+20260325	12:27:43	e15c3096-d389-4c91-b4b1-33e5d4e624a6	GET undefined	 /css/style.css
+20260325	12:27:43	2a68c854-84cc-4e2f-8673-de552e63afd0	GET undefined	 /img/img1.jpg

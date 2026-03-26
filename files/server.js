@@ -5,22 +5,24 @@ const PORT = process.env.PORT || 3500;
 const { logger } = require('../middleware/logEvents.js');
 const  errorHandler  = require('../middleware/errorHandler.js');
 const cors = require('cors');
+const corsOptions = require('../config/corsOptions.js')
+
 
 // custom middleware
 app.use(logger);
 
 // CORS setup
-const whitelist = ['http://localhost:3000', 'https://myapp.com'];
-const corsOptions = {
-  origin: (origin, callback) => {
-    if (whitelist.indexOf(origin) !== -1 || !origin) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  optionsSuccessStatus: 200
-};
+// const whitelist = ['http://localhost:3000', 'https://myapp.com'];
+// const corsOptions = {
+//   origin: (origin, callback) => {
+//     if (whitelist.indexOf(origin) !== -1 || !origin) {
+//       callback(null, true);
+//     } else {
+//       callback(new Error('Not allowed by CORS'));
+//     }
+//   },
+//   optionsSuccessStatus: 200
+// };
 app.use(cors(corsOptions));
 
 // built-in middlewares
@@ -30,11 +32,11 @@ app.use(express.json());
 //serve static files
 app.use(express.static(path.join(__dirname, '..', 'public')));
 //to apply css for subdirectory
-app.use('/subdir', express.static(path.join(__dirname, '..', 'public')));
+// app.use('/subdir', express.static(path.join(__dirname, '..', 'public')));
 
 //routes
-app.use('/subdir', require('../routes/subdir'))
-app.use('/', require('../routes/root'))
+// app.use('/subdir', require('../routes/subdir'))
+app.use('/', require('../routes/root'))//- / mount → Every request (because all paths start with /) will be handled by the root router.
 app.use('/employees', require('../routes/api/employees'))
 // routes
 
@@ -63,7 +65,7 @@ app.use('/employees', require('../routes/api/employees'))
 // 404 handler
 app.use((req, res) => {
   res.status(404).sendFile(path.join(__dirname, '..', 'views', '404.html'));
-});
+});//its global middle ware applied every where
 // app.all('*', (req, res) => {
 //     res.status(404);
 //     if (req.accepts('html')) {
