@@ -29,6 +29,8 @@ const createNewEmployee  = (req,res)=>{
             return res.status(400).json({'message': 'First and last names are required.'})
         }
 
+        data.setEmployees ([...data.employees,newEmployee])
+
 
       }
 
