@@ -62,8 +62,7 @@ const deleteEmployee =  (req, res) => {
     }
     
     const filteredArray = data.employees.filter(emp => emp.id !== parseInt(req.body.id));
-    const unsortedArray = [...filteredArray, employee];
-    data.setEmployees(unsortedArray.sort((a, b) => a.id > b.id ? 1 : a.id < b.id ? -1 : 0));
+    data.setEmployees([...filteredArray]);
     res.json(data.employees);
    
 }
