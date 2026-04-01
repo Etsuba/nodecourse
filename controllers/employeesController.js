@@ -25,13 +25,12 @@ const createNewEmployee  = (req,res)=>{
 
         }
 
-        if (!newEmployee.first || ! newEmployee.lastname) {
+        if (!newEmployee.firstname || ! newEmployee.lastname) {
             return res.status(400).json({'message': 'First and last names are required.'})
         }
 
         data.setEmployees ([...data.employees,newEmployee])
-        res.json(data.employees)
-
+        res.status(201).json(data.employees)
 
       }
 
@@ -48,6 +47,8 @@ const updateEmployee =  (req, res) => {
     res.json(data.employees);
 }
 
+
+
 const getEmployee =(req,res) =>{
     res.json({"id":req.params.id})
 }
@@ -59,6 +60,11 @@ const deleteEmployee =  (req, res) => {
     if (!employee) {
         return res.status(400).json({ "message": `Employee ID ${req.body.id} not found` });
     }
+    
+    const filteredArray = data.employees.filter(emp => emp.id !== parseInt(req.body.id));
+    const unsortedArray = [...filteredArray, employee];
+    data.setEmployees(unsortedArray.sort((a, b) => a.id > b.id ? 1 : a.id < b.id ? -1 : 0));
+    res.json(data.employees);
    
 }
 
