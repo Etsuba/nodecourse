@@ -48,6 +48,10 @@ const updateEmployee =  (req, res) => {
     res.json(data.employees);
 }
 
+const getEmployee =(req,res) =>{
+    res.json({"id":req.params.id})
+}
+
     
 
 const deleteEmployee =  (req, res) => {
