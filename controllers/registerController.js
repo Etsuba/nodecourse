@@ -25,14 +25,22 @@ const handleNewUser = async (req,res) =>{
       //store new user
 
       const newuser = {"username":user,"password": hashedPwd}
-      usersDB.setUsers([...usersDB.users,newuser])
 
+      usersDB.setUsers([...usersDB.users, newuser])
+      await fsPromises.writeFile(
+        path.join(__dirname,"..","model","users.json"),JSON.stringify(usersDB.users)
+      )
+      console.log(usersDB.users)//to check the users  incase they are many
+      res.status(201).json({"sucess":`New user ${user} created`})
 
     } catch (err){
         res.status(500).json({'message':err.message})
     }
 
+
 }
+
+module.exports ={handleNewUser} 
 
 
 
