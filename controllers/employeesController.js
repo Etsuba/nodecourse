@@ -22,7 +22,6 @@ const createNewEmployee  = (req,res)=>{
             id: data.employees[data.employees.length -1].id + 1 || 1,
             firstname: req.body.firstname,
             lastname: req.body.lastname
-
         }
 
         if (!newEmployee.firstname || ! newEmployee.lastname) {
@@ -53,7 +52,7 @@ const deleteEmployee = (req, res) => {
     if (!employee) {
         return res.status(400).json({ "message": `Employee ID ${req.body.id} not found` });
     }
-    
+
     const filteredArray = data.employees.filter(emp => emp.id !== parseInt(req.body.id));
     data.setEmployees([...filteredArray]);
     res.json(data.employees);
