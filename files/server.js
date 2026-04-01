@@ -36,7 +36,9 @@ app.use(express.static(path.join(__dirname, '..', 'public')));
 
 //routes
 // app.use('/subdir', require('../routes/subdir'))
+
 app.use('/', require('../routes/root'))//- / mount → Every request (because all paths start with /) will be handled by the root router.
+app.use('/register', require('../routes/api/register'))
 app.use('/employees', require('../routes/api/employees'))
 // routes
 

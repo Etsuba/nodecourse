@@ -1,5 +1,5 @@
 const usersDB = {
-    users:require('../model/user.json'),//like use state in react
+    users: require('../model/users.json'),//like use state in react
     setUsers: function (data){
         this.users = data
     }
