@@ -1,6 +1,6 @@
 const usersDB = {
     users:require('../model/user.json'),//like use state in react
-    setusers: function (data){
+    setUsers: function (data){
         this.users = data
     }
 
@@ -21,8 +21,11 @@ const handleNewUser = async (req,res) =>{
 
     try {
       //encrypt the passs
+       const hashedPwd = await bcrypt.hash(pwd,10)
+      //store new user
 
-
+      const newuser = {"username":user,"password": hashedPwd}
+      usersDB.setUsers([...usersDB.users,newuser])
 
 
     } catch (err){
