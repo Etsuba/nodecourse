@@ -1,1 +1,2 @@
 20260320	07:38:19	fa932528-6b32-44e6-ba06-94a6d3845a5f	Error: Not allowed by CORS
+20260401	00:35:05	f789593d-85af-407e-b2f2-8df2aa3a17b4	SyntaxError: Unexpected token '"', ""{\"id\":2"... is not valid JSON
