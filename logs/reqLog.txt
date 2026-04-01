@@ -184,3 +184,5 @@
 20260401	01:46:54	e2c9d874-a23f-4251-a914-8300c3f5d34f	GET undefined	 /employees.js
 20260401	01:47:09	13960256-7e49-4e59-bfce-2f46367c263d	GET undefined	 /employees.
 20260401	01:47:14	7c923a51-a0ee-4e45-a79f-d3abb4705fa6	GET undefined	 /employees
+20260401	02:12:05	c1885547-4cbc-43f8-8cf2-ad756fd2f062	GET undefined	 /
+20260401	02:12:35	bb6277f4-b3c2-4e93-8b20-57f1ff96ee67	GET undefined	 /not
