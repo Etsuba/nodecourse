@@ -6,3 +6,5 @@
 20260401	01:13:37	4e7d7b41-ef99-4f09-9003-b002323231c0	SyntaxError: Unexpected token '"', ""{\"firstn"... is not valid JSON
 20260401	01:14:27	2ff9abf5-ba34-461b-8e05-10671e4acfe8	SyntaxError: Unexpected token '"', ""{\"firstn"... is not valid JSON
 20260401	01:14:28	5628c0b1-077d-4ad8-989d-08bc208aadad	SyntaxError: Unexpected token '"', ""{\"firstn"... is not valid JSON
+20260401	09:24:31	76444c03-4166-4e1f-9349-aec2fe77804e	TypeError: Cannot read properties of undefined (reading 'password')
+20260401	09:25:30	1f99e3b7-59fb-4c17-b155-82ce96f9465e	TypeError: Cannot read properties of undefined (reading 'password')

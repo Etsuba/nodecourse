@@ -190,3 +190,9 @@
 20260401	02:37:48	9ad66ad2-530f-41e9-99a6-c973c63a77d0	POST undefined	 /register
 20260401	02:39:32	7bb3d9a6-06f9-422c-9b21-8698b27bf5d0	POST undefined	 /register
 20260401	02:40:20	2bcc006b-cd07-40b2-baba-40402ed3e80f	POST undefined	 /register
+20260401	09:23:57	8175216d-a2e1-4c6b-b565-bcbb2b76808e	POST undefined	 /auth
+20260401	09:24:31	08985720-3ca5-4c5f-9f03-3bbfb9968766	POST undefined	 /auth
+20260401	09:25:11	80e48b85-a4e6-4d51-96ac-988bf35a6d16	GET undefined	 /auth
+20260401	09:25:25	c48e270a-ea44-438d-b707-1e5ddcecf210	GET undefined	 /auth
+20260401	09:25:30	ffc19ee8-9c58-4e1c-880f-d9ae02f36fb2	POST undefined	 /auth
+20260401	09:25:34	5806a0d2-89b4-4832-b261-66827b35804d	POST undefined	 /auth

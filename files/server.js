@@ -7,7 +7,6 @@ const  errorHandler  = require('../middleware/errorHandler.js');
 const cors = require('cors');
 const corsOptions = require('../config/corsOptions.js')
 
-
 // custom middleware
 app.use(logger);
 
@@ -39,6 +38,7 @@ app.use(express.static(path.join(__dirname, '..', 'public')));
 
 app.use('/', require('../routes/root'))//- / mount → Every request (because all paths start with /) will be handled by the root router.
 app.use('/register', require('../routes/api/register'))
+app.use('/auth', require('../routes/api/auth'))
 app.use('/employees', require('../routes/api/employees'))
 // routes
 
