@@ -35,10 +35,15 @@ const handleLogin = async (req,res) =>{
                  )
 
                  // to conect it to db so wjen someone logs out it will erase or invalidate the refresh token
-
+                 //saving refrshToken with the cirrent user so we can eaasily erse the refresh token if they log outgit 
                  const otherUser = usersDB.users.filter( person=> person.username !== foundUser.username)
                  const currentUser = {...foundUser , refreshToken}
-                 usersDB.setUsers
+                 usersDB.setUsers([...otherUser, currentUser])
+                 await fsPromises.writeFile(
+                    path.join(__dirname, "..","model","users.json"),
+                    JSON.stringify(usersDB.users)
+
+                 )
             res.json("success" `user ${user} is logged in`)
          }else {
             res.sendStatus(401)
