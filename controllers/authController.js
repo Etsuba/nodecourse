@@ -33,6 +33,12 @@ const handleLogin = async (req,res) =>{
                     process.env.REFRESH_TOKE_SECRET,
                     {expiresIn: '1d'}
                  )
+
+                 // to conect it to db so wjen someone logs out it will erase or invalidate the refresh token
+
+                 const otherUser = usersDB.users.filter( person=> person.username !== foundUser.username)
+                 const currentUser = {...foundUser , refreshToken}
+                 usersDB.setUsers
             res.json("success" `user ${user} is logged in`)
          }else {
             res.sendStatus(401)
