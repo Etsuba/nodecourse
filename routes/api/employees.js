@@ -4,11 +4,11 @@ const router = express.Router() //interms of app
 // data.employees = require("../../data/employees.json")//like connecting to the data base
 //we moved the above two code to the employesscontroler file because thats where the logic is to be applied
 
-
+const verifyjwt = require("../../middleware/verifyJWT")
 const { getAllEmployees, createNewEmployee, updateEmployee, deleteEmployee, getEmployee } = require('../../controllers/employeesController');
 //chaining each http method together
 router.route("/")
-      .get(getAllEmployees)
+      .get(verifyjwt,getAllEmployees)
       .post(createNewEmployee)
       .put(updateEmployee)
       .delete(deleteEmployee);
