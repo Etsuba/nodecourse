@@ -8,3 +8,6 @@
 20260401	01:14:28	5628c0b1-077d-4ad8-989d-08bc208aadad	SyntaxError: Unexpected token '"', ""{\"firstn"... is not valid JSON
 20260401	09:24:31	76444c03-4166-4e1f-9349-aec2fe77804e	TypeError: Cannot read properties of undefined (reading 'password')
 20260401	09:25:30	1f99e3b7-59fb-4c17-b155-82ce96f9465e	TypeError: Cannot read properties of undefined (reading 'password')
+20260416	07:51:12	90ccb9b1-1ae5-49fa-9557-e9ff1555144e	SyntaxError: Unexpected token '"', ""{\"userna"... is not valid JSON
+20260416	07:51:21	0d284696-5597-4bc2-9eb8-56d35c593ce7	SyntaxError: Unexpected token '"', ""{\"userna"... is not valid JSON
+20260416	07:52:44	aaef1e76-0897-4756-af60-ed6f55c2c934	SyntaxError: Unexpected token '"', ""{\"userna"... is not valid JSON
